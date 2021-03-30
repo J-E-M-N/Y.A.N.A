@@ -8,7 +8,7 @@
 
 ## Overview
 ### Description
-- Share and/or recieve positive message to and from random users
+- Share and/or receive positive message with other users
 
 ### App Evaluation
 - **Category:** Supportive Application
