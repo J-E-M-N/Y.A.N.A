@@ -71,8 +71,8 @@
 
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![image](https://user-images.githubusercontent.com/45021016/113352403-31d60e00-930a-11eb-8188-a2efbf640034.png)
+
 
 ### [BONUS] Digital Wireframes & Mockups
 
