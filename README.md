@@ -1,10 +1,10 @@
 # You Are Not Alone (Y.A.N.A)
 
 ## Table of Contents
-1. [Overview](#Overview)
-2. [Product Spec](#Product-Spec)
-3. [Wireframes](#Wireframes)
-4. [Schema](#Schema)
+1. [Overview](##Overview)
+2. [Product Spec](##Product-Spec)
+3. [Wireframes](##Wireframes)
+4. [Schema](##Schema)
 
 ## Overview
 ### Description
@@ -54,7 +54,7 @@
 **Tab Navigation** (Tab to Screen)
 
 * Home
-* PMs
+* PIMs
 * create (opt)
 
 **Flow Navigation** (Screen to Screen)
@@ -74,15 +74,57 @@
 ![image](https://user-images.githubusercontent.com/45021016/113352403-31d60e00-930a-11eb-8188-a2efbf640034.png)
 
 
-### [BONUS] Digital Wireframes & Mockups
-
-### [BONUS] Interactive Prototype
-
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+- User
+
+|   Property   |      Type      |        Description        | 
+| ------------ | -------------- | ------------------------- | 
+| userID       | String         | unique identifier         |
+| userName     | String         | used to login             |
+| password     | String         | used to login             |
+| pimsSent     | Number         | PIMs sent to others       |
+| pimsReceived | Number         | PIMS received from others |
+| myPIMS       | Pointer to PIM | list of PIMs received     |
+
+<br/>
+
+- PIM
+
+|   Property    |        Type       |      Description      | 
+| ------------- | ----------------- | --------------------- | 
+| objectID      | String            | unique identifier     |
+| author        | Pointer to User   | userID                |
+| message       | String            | positive message      |
+| timestamp     | DateTime          | timestamp of PIM      |
+
+<br/>
+
+- PIMRequest
+
+|   Property    |        Type       |      Description      | 
+| ------------- | ----------------- | --------------------- | 
+| objectID      | String            | unique identifier     |
+| creatorID     | String            | creator of PIMRequest |
+| timestamp     | DateTime          | timestamp of PIM      |
+| received      | Boolean           | PIM sent status       |
+
+<br/>
+
 ### Networking
 - [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+
+- Sign up
+    - (Create/POST) Create a new user in our database
+- Sign in
+    - (Read/GET) Read user's entered credentials from database for validation
+- Home
+    - (Read/GET) Query database to select a random PIM to display
+- PIM
+    - (Read/GET) Query database to show all PIMs a user has received
+- PIM Requests
+    - (Create/POST) Create a new PIMRequest object in our database
+- Create PIM
+    - (Create/POST) Create new PIM object in our database
