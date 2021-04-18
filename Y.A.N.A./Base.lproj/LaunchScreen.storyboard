@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="New Project" translatesAutoresizingMaskIntoConstraints="NO" id="RTN-69-pUL">
-                                <rect key="frame" x="117" y="244" width="181" height="168"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="New Project (2)" highlightedImage="New Project (2)" translatesAutoresizingMaskIntoConstraints="NO" id="RTN-69-pUL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -30,6 +30,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="New Project" width="800" height="800"/>
+        <image name="New Project (2)" width="2436" height="2436"/>
     </resources>
 </document>

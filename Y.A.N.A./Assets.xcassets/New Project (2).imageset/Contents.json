@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "New Project.jpg",
+      "filename" : "New Project (2).jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,6 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
-    },
-    {
-      "filename" : "New Project.png",
-      "idiom" : "universal",
-      "scale" : "1x",
-      "unassigned" : true
     }
   ],
   "info" : {

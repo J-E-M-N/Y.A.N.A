@@ -31,11 +31,13 @@
       "size" : "40x40"
     },
     {
+      "filename" : "New Project (1).jpg",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+      "filename" : "New Project.jpg",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -89,6 +91,16 @@
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "idiom" : "car",
+      "scale" : "2x",
+      "size" : "60x60"
+    },
+    {
+      "idiom" : "car",
+      "scale" : "3x",
+      "size" : "60x60"
     }
   ],
   "info" : {
