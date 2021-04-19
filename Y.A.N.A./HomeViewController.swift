@@ -12,16 +12,22 @@ import Parse
 class HomeViewController: UIViewController {
     @IBOutlet weak var dailyPIM: UILabel!
     
+    
     @IBAction func sendPIM(_ sender: Any) {
         print("Sending PIM...")
+        
     }
     
     //get a new PIM
     //TODO:
     //  **- update label dailyPIM
     //  - add ID to current user's myPIMs on server
+    
+    
+    
     @IBAction func receivePIM(_ sender: Any) {
         print("Getting PIM...")
+        
         let queryPIMs = PFQuery(className: "PIM")
         queryPIMs.includeKeys(["objectId", "message"])
 //        query.limit = 20
@@ -61,18 +67,15 @@ class HomeViewController: UIViewController {
             
         }//end findObjectsInBackground
     }//end receivePIM
-    
-    
-    @IBAction func createPIM(_ sender: Any) {
-        print("Creating PIM...")
-    }
-    
+            
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
     }
     
+}
 
     /*
     // MARK: - Navigation
@@ -83,5 +86,3 @@ class HomeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
-}

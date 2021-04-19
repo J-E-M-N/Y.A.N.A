@@ -10,6 +10,7 @@
 		1E41014DF4BC0E6E42A186C8 /* Pods_Y_A_N_A__Y_A_N_A_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78D3C946616EAD032475630A /* Pods_Y_A_N_A__Y_A_N_A_UITests.framework */; };
 		2D5ACB783C46179E73463C11 /* Pods_Y_A_N_A_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C16F1C3ED0A2FCE08786C1 /* Pods_Y_A_N_A_Tests.framework */; };
 		5C91A7E42629796D0084A319 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C91A7E32629796D0084A319 /* HomeViewController.swift */; };
+		B5AE5AA3262DE52D00911A56 /* CreatePIMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE5AA2262DE52D00911A56 /* CreatePIMViewController.swift */; };
 		C26F20802627B2C700654EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F207F2627B2C700654EE6 /* AppDelegate.swift */; };
 		C26F20822627B2C700654EE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26F20812627B2C700654EE6 /* SceneDelegate.swift */; };
 		C26F20872627B2C700654EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C26F20852627B2C700654EE6 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		584461FD7D9E246345AA3425 /* Pods-Y.A.N.A.Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Y.A.N.A.Tests.debug.xcconfig"; path = "Target Support Files/Pods-Y.A.N.A.Tests/Pods-Y.A.N.A.Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C91A7E32629796D0084A319 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		78D3C946616EAD032475630A /* Pods_Y_A_N_A__Y_A_N_A_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Y_A_N_A__Y_A_N_A_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE5AA2262DE52D00911A56 /* CreatePIMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePIMViewController.swift; sourceTree = "<group>"; };
 		B64662FADABD5547807860F8 /* Pods_Y_A_N_A_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Y_A_N_A_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB26FCDBE0F01321CCD7757E /* Pods-Y.A.N.A..release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Y.A.N.A..release.xcconfig"; path = "Target Support Files/Pods-Y.A.N.A./Pods-Y.A.N.A..release.xcconfig"; sourceTree = "<group>"; };
 		C26F207C2627B2C700654EE6 /* Y.A.N.A..app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Y.A.N.A..app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +138,7 @@
 				C26F208D2627B2C800654EE6 /* Info.plist */,
 				C26F20C12627B63300654EE6 /* LoginViewController.swift */,
 				5C91A7E32629796D0084A319 /* HomeViewController.swift */,
+				B5AE5AA2262DE52D00911A56 /* CreatePIMViewController.swift */,
 			);
 			path = Y.A.N.A.;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AE5AA3262DE52D00911A56 /* CreatePIMViewController.swift in Sources */,
 				C26F20C22627B63300654EE6 /* LoginViewController.swift in Sources */,
 				C26F20802627B2C700654EE6 /* AppDelegate.swift in Sources */,
 				C26F20822627B2C700654EE6 /* SceneDelegate.swift in Sources */,
