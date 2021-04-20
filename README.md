@@ -128,3 +128,6 @@
     - (Create/POST) Create a new PIMRequest object in our database
 - Create PIM
     - (Create/POST) Create new PIM object in our database
+
+![eTbjard](https://user-images.githubusercontent.com/44181766/115456891-b3c2a400-a1f1-11eb-8c77-4f99245e16cc.gif)
+
