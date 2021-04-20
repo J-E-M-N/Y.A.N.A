@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -138,11 +139,11 @@
                                 </state>
                                 <connections>
                                     <action selector="OnSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HZU-09-S89"/>
-                                    <segue destination="aZO-bi-D9y" kind="presentation" id="gbB-Cj-vqj"/>
+                                    <segue destination="p9r-7q-2mi" kind="presentation" id="gbB-Cj-vqj"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kUe-Ql-3FB">
-                                <rect key="frame" x="50" y="20" width="314" height="0.0"/>
+                                <rect key="frame" x="50" y="76" width="314" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -156,7 +157,6 @@
                             <constraint firstItem="kUe-Ql-3FB" firstAttribute="leading" secondItem="9qP-C5-vKh" secondAttribute="leading" constant="50" id="bIu-BD-6uc"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="biO-9B-3PA"/>
                     <navigationItem key="navigationItem" title="Home" id="rK8-Ig-vab"/>
                     <connections>
                         <outlet property="dailyPIM" destination="kUe-Ql-3FB" id="yeY-IX-YG3"/>
@@ -164,14 +164,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ohl-SQ-ZO0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.4492753623188408" y="1599.7767857142856"/>
+            <point key="canvasLocation" x="-1" y="2332"/>
         </scene>
         <!--CreatePIM View Controller-->
         <scene sceneID="OF5-hx-Orl">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="aZO-bi-D9y" customClass="CreatePIMViewController" customModule="Y_A_N_A_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Acg-SF-l0l">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type a PIM here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1D8-4O-55E">
@@ -207,29 +207,81 @@
                         <viewLayoutGuide key="safeArea" id="KiI-GR-r6W"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gYG-XC-D3s">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="YJh-bj-xDT">
+                            <connections>
+                                <action selector="onBack:" destination="aZO-bi-D9y" id="S5K-Ic-ctW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="1D8-4O-55E" id="Qth-87-bH8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OoF-ci-tYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1.4492753623188408" y="2331.6964285714284"/>
+            <point key="canvasLocation" x="-1" y="3758"/>
         </scene>
-        <!--PIMs-->
+        <!--PIMsViewController-->
         <scene sceneID="arE-m7-8kF">
             <objects>
-                <viewController id="NAH-bc-5Xk" sceneMemberID="viewController">
+                <viewController title="PIMsViewController" id="NAH-bc-5Xk" customClass="PIMsViewController" customModule="Y_A_N_A_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rIH-F2-099">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="di0-dM-CKB">
+                                <rect key="frame" x="0.0" y="-45" width="414" height="887"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="separatorColor" name="AccentColor"/>
+                                <color key="sectionIndexBackgroundColor" name="AccentColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PIMCell" rowHeight="124" id="Acc-st-akq" customClass="PIMCell" customModule="Y_A_N_A_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="124"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Acc-st-akq" id="MH3-Kg-R6I">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="124"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PIM message goes here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpv-eQ-N3N">
+                                                    <rect key="frame" x="24" y="19" width="374" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="gpv-eQ-N3N" firstAttribute="leading" secondItem="MH3-Kg-R6I" secondAttribute="leadingMargin" constant="4" id="Cpy-cM-OGK"/>
+                                                <constraint firstItem="gpv-eQ-N3N" firstAttribute="top" secondItem="MH3-Kg-R6I" secondAttribute="topMargin" constant="8" id="GBT-TA-7o4"/>
+                                                <constraint firstItem="gpv-eQ-N3N" firstAttribute="trailing" secondItem="MH3-Kg-R6I" secondAttribute="trailingMargin" constant="4" id="pid-ch-s6l"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gpv-eQ-N3N" secondAttribute="bottom" constant="8" id="qhd-Cf-Hqk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="message" destination="gpv-eQ-N3N" id="Uyp-zg-aUv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="rS1-BM-wum"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PIMs" id="XRz-Uv-T6W"/>
+                    <navigationItem key="navigationItem" title="PIMs" id="I1G-gu-z6a">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="hcd-2S-Vz2">
+                            <connections>
+                                <action selector="refresh:" destination="NAH-bc-5Xk" id="KxT-66-ey5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="di0-dM-CKB" id="IiQ-sP-rok"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvE-zn-Jwy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="1600"/>
+            <point key="canvasLocation" x="1128.985507246377" y="2331.6964285714284"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="1b9-wM-3Be">
@@ -241,8 +293,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="g1R-lA-v9G" kind="relationship" relationship="viewControllers" id="3OP-DA-nSf"/>
-                        <segue destination="NAH-bc-5Xk" kind="relationship" relationship="viewControllers" id="go0-fg-zyd"/>
+                        <segue destination="fgu-MI-RxS" kind="relationship" relationship="viewControllers" id="3OP-DA-nSf"/>
+                        <segue destination="Oer-rY-sbp" kind="relationship" relationship="viewControllers" id="go0-fg-zyd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QeV-uw-TQg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -267,11 +319,67 @@
             </objects>
             <point key="canvasLocation" x="577" y="-620"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OJK-yX-YCw">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6a-Mj-4LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p9r-7q-2mi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="y5L-ef-zVH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aZO-bi-D9y" kind="relationship" relationship="rootViewController" id="Lul-XU-pyR"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1" y="3044"/>
+        </scene>
+        <!--PIMs-->
+        <scene sceneID="Llc-dH-1Gc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oer-rY-sbp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="PIMs" id="XRz-Uv-T6W"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ipe-Y5-PVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NAH-bc-5Xk" kind="relationship" relationship="rootViewController" id="kJi-aN-7Ml"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gyi-dA-WHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="1600"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="EcY-mQ-W5e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fgu-MI-RxS" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" id="biO-9B-3PA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3g5-T4-A33">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="g1R-lA-v9G" kind="relationship" relationship="rootViewController" id="9w8-gP-NYU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W8h-YE-r5q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1.4492753623188408" y="1599.7767857142856"/>
+        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

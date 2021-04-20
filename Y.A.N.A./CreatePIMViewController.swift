@@ -12,6 +12,9 @@ import Parse
 class CreatePIMViewController: UIViewController,UINavigationControllerDelegate {
 
     @IBOutlet weak var messageTextField: UITextField!
+    @IBAction func onBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
